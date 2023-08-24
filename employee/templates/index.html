@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="center-image">
+          <img src="{% static 'images/logo1.jpg' %}" alt="Logo" class="logo-image">
+      </div>
+      <br>
+     
+        <div class="field">
+            <label for="{{ form.emp_id.id_for_label }}">Employee ID:</label>
+            {{ form.emp_id }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.emp_name.id_for_label }}">Employee Name:</label>
+            {{ form.emp_name }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.dob.id_for_label }}">Date of Birth:</label>
+            {{ form.dob }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.quali.id_for_label }}">Qualification:</label>
+            {{ form.quali }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.org_name.id_for_label }}">Organization Name:</label>
+            {{ form.org_name }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.desg.id_for_label }}">Designation:</label>
+            {{ form.desg }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.ven_code.id_for_label }}">Vendor Code:</label>
+            {{ form.ven_code }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.basic.id_for_label }}">Basic Salary:</label>
+            {{ form.basic }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.doj.id_for_label }}">Date of Joining:</label>
+            {{ form.doj }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.gender.id_for_label }}">Gender:</label>
+            {{ form.gender }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.add1.id_for_label }}">Address Line 1:</label>
+            {{ form.add1 }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.add2.id_for_label }}">Address Line 2:</label>
+            {{ form.add2 }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.pin.id_for_label }}">PIN:</label>
+            {{ form.pin }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.mob.id_for_label }}">Mobile:</label>
+            {{ form.mob }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.esic_enrolled.id_for_label }}">ESIC Enrolled:</label>
+            {{ form.esic_enrolled }}
+        </div>
+        
+        <div class="field">
+            <label for="{{ form.esic_location.id_for_label }}">ESIC Location:</label>
+            {{ form.esic_location }}
+        </div>
+        
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

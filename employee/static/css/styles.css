@@ -1,0 +1,97 @@
+/* Style the form container */
+form {
+    max-width: 600px;
+    margin: 20px auto; /* Add some space at the top and bottom */
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Add space at the top of the page */
+body {
+    padding-top: 40px;
+}
+
+/* Style the form header */
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Style the messages */
+.messages {
+    list-style: none;
+    padding: 10px;
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: #333;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Style specific message tags */
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}
+
+/* Style the form fields */
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field label {
+    flex-basis: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.field select,
+.field input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Style the Save button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 150px;
+}
+
+/* Style the Save button on hover */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Center the image horizontally */
+.center-image {
+    text-align: center;
+    margin-top: 20px; /* Add space between the image and form */
+}
+
+/* Style the image */
+.logo-image {
+    max-width: 100%;
+    height: auto;
+}
+
